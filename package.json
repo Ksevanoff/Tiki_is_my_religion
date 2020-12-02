@@ -1,0 +1,14 @@
+{
+  "name": "tiki_is_my_religion",
+  "version": "1.0.0",
+  "description": "Tiki Is My Religion",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
