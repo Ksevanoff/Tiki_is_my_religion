@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Arima Madurai", cursive;
   line-height: 1.6;
   background: #fff;
 }
@@ -27,9 +27,26 @@ ul {
   list-style: none;
 }
 
+h1 {
+  font-family: "Arima Madurai", cursive;
+  color: #fff;
+  font-size: 4rem;
+  letter-spacing: -3px;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 3;
+}
+
 h2,
 h3,
 h4 {
+  font-family: "Arima Madurai", cursive;
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: -3px;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 3;
   text-transform: uppercase;
 }
 
@@ -79,24 +96,18 @@ img {
 
 #header {
   &-home {
-    // Header Home
     background: $bg-image no-repeat center right / cover;
     height: 100vh;
     color: #fff;
 
-    //Header Content
     .header-content {
       text-align: center;
       padding-top: 20%;
-
-      h1 {
-        font-size: 4rem;
-        line-height: 1.2;
-      }
     }
   }
+
   &-inner {
-    background: $bg-image no-repeat center right/ cover;
+    background: $bg-image no-repeat 20% 30% / cover;
     height: 5.5rem;
     border-bottom: 3px solid $main-color;
   }
@@ -105,58 +116,122 @@ img {
 //Home Sections
 #home {
   &-a {
+    background: $main-color;
+    .bottom-line {
+      height: 3px;
+      width: 20rem;
+      margin-top: 1rem;
+    }
     .specials {
       margin: 3rem 0;
       display: grid;
       grid-gap: 1rem;
       grid-template-columns: repeat(3, 1fr);
 
-      .fas {
-        color: $main-color;
-        padding-bottom: 0.4rem;
+      .box {
+        grid-gap: 1rem;
+        text-align: center;
+        margin: 1rem;
+
+        .fas {
+          color: $sand-color;
+          padding-bottom: 0.4rem;
+        }
       }
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-top: 3rem;
+    }
+
+    .lead {
+      text-align: center;
+      font-size: 20px;
     }
   }
 }
 
-//About Sections
-#about {
-  &-a {
-    .about-info {
-      display: grid;
-      grid-template-areas:
-        "bioimage-a bio-a bio-a"
-        "bio-b bio-b bioimage-b";
-      grid-gap: 1.2rem;
-    }
+.flex-columns {
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 
-    .bio-image-a {
-      width: 100%;
-      height: 100%;
-    }
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+}
 
-    //Grid Area
-    .bio-image-a {
-      grid-area: bioimage-a;
+.flex-columns.flex-reverse .row {
+  flex-direction: row-reverse;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+  height: 100%;
+}
+
+.flex-columns .row {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .column-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
+    .meta {
+      text-align: left;
     }
-    .bio-image-b {
-      grid-area: bioimage-b;
-    }
-    .bio-a {
-      grid-area: bio-a;
-      border-left: 3px solid $main-color;
-      padding: 0.8rem;
-    }
-    .bio-b {
-      grid-area: bio-b;
-      border-right: 3px solid $main-color;
-    }
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 100;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+}
+
+#about-a {
+  .flex-columns .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
 //Contact form
 
 #contact {
+  background: $main-color;
+
+  .section-title {
+    text-align: center;
+    color: $main-color;
+  }
+  .container {
+    background: $sand-color;
+  }
   .text-fields {
     display: grid;
     grid-template-areas:
@@ -180,17 +255,29 @@ img {
       padding: 0.5rem 1rem;
     }
   }
-
   button[type="submit"] {
-    width: 50%;
-    margin: 2rem;
+    width: 70%;
+    color: #fff;
+    margin: 0 15% 50px 15%;
+    background: $main-color;
   }
 }
 
+#work-a {
+  .section-title {
+    text-align: center;
+    color: #fff;
+  }
+  .bottom-line {
+    height: 3px;
+    width: 20rem;
+    margin: 0, 4rem, 4rem, 4rem;
+  }
+}
 //Footer
 #main-footer {
-  background: $dark-color;
-  color: #fff;
+  background: $grey-color;
+  color: #333;
   height: 3rem;
 
   .footer-content {
@@ -201,7 +288,7 @@ img {
 
     .social .fab {
       margin-right: 1rem;
-      border: 2px #fff solid;
+      border: 2px #333 solid;
       border-radius: 50%;
       height: 20px;
       width: 20px;

@@ -12,6 +12,7 @@
   padding: 0.8rem 2rem;
   transition: all 0.5s;
   border: none;
+  border-radius: 5%;
   cursor: pointer;
 }
 
@@ -23,8 +24,8 @@
   }
   &-light {
     @extend %btn-shared;
-    color: #333;
-    background-color: $light-color;
+    color: #ffffff;
+    background-color: transparent;
   }
   &-medium {
     @extend %btn-shared;
@@ -67,15 +68,10 @@ input[class^="btn-"]:hover {
     background: $sand-color;
     color: set-text-color($sand-color);
   }
-}
-
-.lead {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.text-center {
-  text-align: center;
+  &-grey {
+    background: $grey-color;
+    color: set-text-color($grey-color);
+  }
 }
 
 //Margin
@@ -92,4 +88,24 @@ input[class^="btn-"]:hover {
   &-4 {
     margin: 4rem 0;
   }
+}
+
+.py-2 {
+  margin: 2rem;
+}
+
+.py-1 {
+  margin: 0 1rem;
+}
+
+.fas {
+  color: $sand-color;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: $sand-color;
+  display: block;
+  margin: 0 auto 1rem auto;
 }

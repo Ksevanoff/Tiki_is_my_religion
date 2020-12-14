@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-  grid-gap: 1rem;
 }
 
 .item {
@@ -42,7 +41,6 @@
 
   &-image {
     height: auto;
-    width: auto;
     transform: translateZ(0);
     display: block;
     transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
@@ -77,7 +75,7 @@
     transform: translateY(-20%);
     transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1),
       transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
-    transition-delay: 500ms;
+    transition-delay: 300ms;
   }
 
   &-text-wrap {
